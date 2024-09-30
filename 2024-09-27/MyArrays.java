@@ -10,8 +10,18 @@ public class MyArrays{
     return out + "]";
   }
 
+  //Write a function that returns a new array with the same values as the parameter ary.
   public static int[] returnCopy(int[]ary){
+    int [] outAry = new int [ary.length];
+    for (int i = 0; i < ary.length; i++){
+      outAry[i] = ary[i];
+    }
+    return outAry;
+  }
 
+  //public static int[] concatArray(int[]ary1,int[]ary2)
+  public static int[] concatArray(int[]ary1,int[]ary2){
+    
   }
 
 
