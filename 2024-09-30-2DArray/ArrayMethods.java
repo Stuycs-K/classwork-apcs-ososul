@@ -9,6 +9,9 @@ public class ArrayMethods{
       System.out.println(arrToString(test));
       System.out.println(arrToString(test1));
       System.out.println(arrToString(test2));
+      System.out.println(arr2DSum(test));
+      System.out.println(arr2DSum(test1));
+      System.out.println(arr2DSum(test2));
     }
     public static String arrToString(int[] ary){
       String arrString = "[";
@@ -43,7 +46,13 @@ public class ArrayMethods{
     public static int arr2DSum(int[][]nums){
       //use a nested loop to solve this
       int sum = 0;
-      return null;//place holder return value so it compiles.
+      for (int i = 0; i < nums.length; i++){
+        for (int j = 0; j < nums[i].length; j++){
+            sum += nums[i][j];
+        }
+      }
+
+      return sum;
     }
   
     /**Rotate an array by returning a new array with the rows and columns swapped.
