@@ -12,6 +12,7 @@ public class ArrayMethods{
       System.out.println(arr2DSum(test));
       System.out.println(arr2DSum(test1));
       System.out.println(arr2DSum(test2));
+      System.out.println(arrToString(swapRC(test1)));
     }
     public static String arrToString(int[] ary){
       String arrString = "[";
@@ -59,7 +60,13 @@ public class ArrayMethods{
       * You may assume the array is rectangular and neither rows nor cols is 0.
       * e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
       */
-  //  public static int[][] swapRC(int[][]nums){
-  //    return new int[1][1];
-  //  }
+    public static int[][] swapRC(int[][]nums){
+      int [][] outArray = new int[nums[0].length][nums.length];
+      for (int i = 0; i < nums.length; i++){
+        for (int j = 0; j < nums[i].length; j++){
+            outArray[j][i] = nums[i][j];
+        }
+      }    
+        return outArray;
+    }
 }
