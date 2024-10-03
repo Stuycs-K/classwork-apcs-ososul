@@ -13,6 +13,11 @@ public class ArrayMethods{
       System.out.println(arr2DSum(test1));
       System.out.println(arr2DSum(test2));
       System.out.println(arrToString(swapRC(test1)));
+      
+      System.out.println(arrToString(copy(test)));
+      System.out.println(arrToString(copy(test1)));
+      System.out.println(arrToString(copy(test2)));
+
       int[][] testReplaceNegative1 = {
         {1, -2, 3}, 
         {4, -5, 6}, 
