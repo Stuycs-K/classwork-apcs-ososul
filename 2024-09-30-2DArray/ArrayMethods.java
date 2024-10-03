@@ -13,7 +13,7 @@ public class ArrayMethods{
       System.out.println(arr2DSum(test1));
       System.out.println(arr2DSum(test2));
       System.out.println(arrToString(swapRC(test1)));
-      
+
       System.out.println(arrToString(copy(test)));
       System.out.println(arrToString(copy(test1)));
       System.out.println(arrToString(copy(test2)));
@@ -118,6 +118,7 @@ public class ArrayMethods{
     //You SHOULD write a helper method for this.
     //If you don't see a good way to do that, you should stop and look at prior methods.
     
+    //helper
     public static int[] copy(int[] nums){
         int[] output = new int [nums.length];
         for (int i = 0; i < nums.length; i++){
@@ -126,6 +127,7 @@ public class ArrayMethods{
         return output;
     }
     
+    //copy using helper (1d copy)
     public static int[][] copy(int[][] nums){
         int [][] newArray = new int [nums.length][];
         for (int i = 0; i < nums.length; i++){
