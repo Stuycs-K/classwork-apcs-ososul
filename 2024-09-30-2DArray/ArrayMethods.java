@@ -107,4 +107,25 @@ public class ArrayMethods{
             }
         }
     }
+    //4. Make a copy of the given 2d array.
+    //When testing : make sure that changing the original does NOT change the copy.
+    //DO NOT use any built in methods that "copy" an array.
+    //You SHOULD write a helper method for this.
+    //If you don't see a good way to do that, you should stop and look at prior methods.
+    
+    public static int[] copy(int[] nums){
+        int[] output = new int [nums.length];
+        for (int i = 0; i < nums.length; i++){
+            output[i] = nums[i];
+        }
+        return output;
+    }
+    
+    public static int[][] copy(int[][] nums){
+        int [][] newArray = new int [nums.length][];
+        for (int i = 0; i < nums.length; i++){
+            newArray[i] = copy(nums[i]);
+        }
+        return newArray;
+    }
 }
