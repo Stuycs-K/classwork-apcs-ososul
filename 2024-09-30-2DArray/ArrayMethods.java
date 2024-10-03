@@ -69,4 +69,23 @@ public class ArrayMethods{
       }    
         return outArray;
     }
+    //3. Modify a given 2D array of integer as follows:
+    //Replace all the negative values:
+    //-When the row number is the same as the column number replace
+    //that negative with the value 1
+    //-All other negatives replace with 0
+    public static void replaceNegative(int[][] vals){ 
+        for (int i = 0; i < vals.length; i++){
+            for (int j = 0; j < vals[i].length; j++){
+                if (vals[i][j] < 0){
+                    if (i == j){
+                        vals[i][j] = 1;
+                    }
+                    else{
+                        vals[i][j] = 0;
+                    }
+                }
+            }
+        }
+    }
 }
