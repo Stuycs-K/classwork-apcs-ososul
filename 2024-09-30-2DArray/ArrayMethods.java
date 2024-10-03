@@ -13,7 +13,26 @@ public class ArrayMethods{
       System.out.println(arr2DSum(test1));
       System.out.println(arr2DSum(test2));
       System.out.println(arrToString(swapRC(test1)));
+      int[][] testReplaceNegative1 = {
+        {1, -2, 3}, 
+        {4, -5, 6}, 
+        {-7, 8, -9}
+    };
+    int[][] testReplaceNegative2 = {
+        {-1, -2, -3}, 
+        {-4, -5, -6}, 
+        {-7, -8, -9}
+    };
+
+    System.out.println(arrToString(testReplaceNegative1));
+    replaceNegative(testReplaceNegative1);
+    System.out.println(arrToString(testReplaceNegative1));
+
+    System.out.println(arrToString(testReplaceNegative2));
+    replaceNegative(testReplaceNegative2);
+    System.out.println(arrToString(testReplaceNegative2));
     }
+    
     public static String arrToString(int[] ary){
       String arrString = "[";
       for (int i = 0; i < ary.length; i++){
