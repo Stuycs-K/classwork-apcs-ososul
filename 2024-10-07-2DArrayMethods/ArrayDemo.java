@@ -5,7 +5,14 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
-
+    int[][] test = {{}, {}};
+    int[][] test1 = {{1,2,3}, {23, 4, 7}, {16, 15, 3}};
+    int[][] test2 = {{1, 2}, {2, 7, 5, 6}, {}};
+    int [] test3 = {1,4,5,-7,4};
+    System.out.println(deepToString(test).equals(Arrays.toString(test)));
+    System.out.println(deepToString(test1).equals(Arrays.toString(test1)));
+    System.out.println(deepToString(test2).equals(Arrays.toString(test2)));
+    System.out.println(arrToString(test3).equals(Arrays.toString(test3)));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
