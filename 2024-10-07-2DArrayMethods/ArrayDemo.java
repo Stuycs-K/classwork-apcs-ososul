@@ -35,13 +35,13 @@ public class ArrayDemo{
         {-7, -8, -9}
     };
 
-    System.out.println(arrToString(testReplaceNegative1));
+    System.out.println(Arrays.deepToString(testReplaceNegative1));
     replaceNegative(testReplaceNegative1);
-    System.out.println(arrToString(testReplaceNegative1));
+    System.out.println(Arrays.deepToString(testReplaceNegative1));
 
-    System.out.println(arrToString(testReplaceNegative2));
+    System.out.println(Arrays.deepToString(testReplaceNegative2));
     replaceNegative(testReplaceNegative2);
-    System.out.println(arrToString(testReplaceNegative2));
+    System.out.println(Arrays.deepToString(testReplaceNegative2));
 
     // Test cases for countZeros2D method
     int[][] zeroTest1 = {{0, 1, 2}, {0, 0, 3}, {4, 5, 0}};
@@ -51,7 +51,7 @@ public class ArrayDemo{
     System.out.println(countZeros2D(zeroTest1) == 4); // 4 expected
     System.out.println(countZeros2D(zeroTest2) == 1); // 1 expected
     System.out.println(countZeros2D(zeroTest3) == 9); // 9 expected
-    
+
     // Test cases for htmlTable method
     int[][] htmlTest1 = {{1, 2}, {3, 4}};
     int[][] htmlTest2 = {{5}, {6}, {17, 8}};
