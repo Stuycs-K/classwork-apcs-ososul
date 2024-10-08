@@ -13,6 +13,35 @@ public class ArrayDemo{
     System.out.println(arrToString(test1).equals(Arrays.deepToString(test1)));
     System.out.println(arrToString(test2).equals(Arrays.deepToString(test2)));
     System.out.println(arrToString(test3).equals(Arrays.toString(test3)));
+
+    System.out.println(arr2DSum(test));
+    System.out.println(arr2DSum(test1));
+    System.out.println(arr2DSum(test2));
+    System.out.println(arrToString(swapRC(test1)));
+
+    System.out.println(Arrays.deepToString(copy(test)));
+    System.out.println(Arrays.deepToString(copy(test1)));
+    System.out.println(Arrays.deepToString(copy(test2)));
+    System.out.println(Arrays.toString(copy(test3)));
+
+    int[][] testReplaceNegative1 = {
+      {1, -2, 3}, 
+      {4, -5, 6}, 
+      {-7, 8, -9}
+    };
+    int[][] testReplaceNegative2 = {
+        {-1, -2, -3}, 
+        {-4, -5, -6}, 
+        {-7, -8, -9}
+    };
+
+    System.out.println(arrToString(testReplaceNegative1));
+    replaceNegative(testReplaceNegative1);
+    System.out.println(arrToString(testReplaceNegative1));
+
+    System.out.println(arrToString(testReplaceNegative2));
+    replaceNegative(testReplaceNegative2);
+    System.out.println(arrToString(testReplaceNegative2));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
