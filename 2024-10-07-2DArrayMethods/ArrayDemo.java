@@ -42,7 +42,26 @@ public class ArrayDemo{
     System.out.println(arrToString(testReplaceNegative2));
     replaceNegative(testReplaceNegative2);
     System.out.println(arrToString(testReplaceNegative2));
+
+    // Test cases for countZeros2D method
+    int[][] zeroTest1 = {{0, 1, 2}, {0, 0, 3}, {4, 5, 0}};
+    int[][] zeroTest2 = {{}, {}, {0}};
+    int[][] zeroTest3 = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+
+    System.out.println(countZeros2D(zeroTest1) == 4); // 4 expected
+    System.out.println(countZeros2D(zeroTest2) == 1); // 1 expected
+    System.out.println(countZeros2D(zeroTest3) == 9); // 9 expected
+    
+    // Test cases for htmlTable method
+    int[][] htmlTest1 = {{1, 2}, {3, 4}};
+    int[][] htmlTest2 = {{5}, {6}, {17, 8}};
+    int[][] htmlTest3 = {{}, {}, {9, 10, 18}};
+
+    System.out.println(htmlTable(htmlTest1).equals("<table><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr></table>"));
+    System.out.println(htmlTable(htmlTest2).equals("<table><tr><td>5</td></tr><tr><td>6</td></tr><tr><td>17</td><td>8</td></tr></table>"));
+    System.out.println(htmlTable(htmlTest3).equals("<table><tr></tr><tr></tr><tr><td>9</td><td>10</td><td>18</td></tr></table>"));
   }
+  
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
   public static String arrToString(int[] ary){
