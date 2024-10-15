@@ -2,13 +2,15 @@ public class Point{
   private double x,y;
 
   public String toString(){
-    return "(" + x + ", " + y + ")";
+    return "(" + getX() + ", " + getY() + ")";
   }
 
   //Initialize this Point to have the same values as the other Point.
   public Point(Point other){
     //COMPLETE THIS SECOND
     //Then write test cases.
+    x = other.getY();
+    y = other.getY();
   }
 
   //Initialize this Point to have the provided values
