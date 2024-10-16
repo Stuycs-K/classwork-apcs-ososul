@@ -9,7 +9,7 @@ public class Point{
   public Point(Point other){
     //COMPLETE THIS SECOND
     //Then write test cases.
-    x = other.getY();
+    x = other.getX();
     y = other.getY();
   }
 
