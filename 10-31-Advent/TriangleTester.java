@@ -67,6 +67,7 @@ public class TriangleTester {
         return count;
     }
 
+    // Main
     public static void main(String[] args) {
         String file = "inputTri.txt";
     
