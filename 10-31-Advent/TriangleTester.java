@@ -67,5 +67,17 @@ public class TriangleTester {
         return count;
     }
 
+    public static void main(String[] args) {
+        String file = "inputTri.txt";
+    
+        // Part A
+        int trianglesByRow = countTrianglesA(file);
+        System.out.println(trianglesByRow); 
+    
+        // Part B
+        int trianglesByColumn = countTrianglesB(file);
+        System.out.println(trianglesByColumn); 
+    }
+    
 
 }
