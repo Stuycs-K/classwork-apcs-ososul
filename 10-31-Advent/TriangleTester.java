@@ -35,4 +35,37 @@ public class TriangleTester {
         return count;
     }
 
+    // Counts valid triangles by reading columns of data grouped in sets of three rows
+    public static int countTrianglesB(String filename) {
+        int count = 0;
+
+        try {
+            Scanner sc = new Scanner(new File(filename));
+            String[][] rows = new String[3][]; // Array to store 
+
+            while (sc.hasNextLine()) {
+                for (int i = 0; i < 3; i++) {
+                    if (sc.hasNextLine()) {
+                        rows[i] = sc.nextLine().split(" "); 
+                    }
+                }
+
+                for (int col = 0; col < 3; col++) {
+                    int side1 = Integer.parseInt(rows[0][col]);
+                    int side2 = Integer.parseInt(rows[1][col]);
+                    int side3 = Integer.parseInt(rows[2][col]);
+                    if (isValidTriangle(side1, side2, side3)) {
+                        count++;
+                    }
+                }
+            }
+            sc.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Error: File not found");
+        }
+
+        return count;
+    }
+
+
 }
