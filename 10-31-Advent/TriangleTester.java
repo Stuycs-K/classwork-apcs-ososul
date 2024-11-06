@@ -8,4 +8,31 @@ public class TriangleTester {
         return (a + b > c) && (a + c > b) && (b + c > a);
     }
 
+    // Part A
+    public static int countTrianglesA(String filename) {
+        int count = 0;
+
+        try {
+            Scanner sc = new Scanner(new File(filename));
+
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                String[] sides = line.split(" ");
+                int side1 = Integer.parseInt(sides[0]);
+                int side2 = Integer.parseInt(sides[1]);
+                int side3 = Integer.parseInt(sides[2]);
+
+                // Check if valid triangle
+                if (isValidTriangle(side1, side2, side3)) {
+                    count++;
+                }
+            }
+            sc.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Error: File not found");
+        }
+
+        return count;
+    }
+
 }
