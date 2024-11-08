@@ -42,9 +42,9 @@ public class Bird extends Animal {
     //e.g. "The Mighty Polly" instead of just "Polly"
     //You can call the superclass' getName method using the syntax: super.getName()
   
-public String getName(){
-    return "The Mighty " + super.getName();
-}
+    public String getName(){
+        return "The Mighty " + super.getName();
+    }
 
     //Step 8:In Driver.java answer: What is the difference before and after you override this method?
     //What does this tell us about methods that are overridden?
