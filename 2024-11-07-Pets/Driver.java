@@ -4,6 +4,7 @@
 // Tests 1-3 work because a Bird is an Animal, so it can be assigned to an Animal reference.
 // Both animal to animal and bird to bird also work.
 // Test 4 does not work because not all Animals are Birds, so this produced an error.
+
 public class Driver {
 
     public static void main (String[] args){
