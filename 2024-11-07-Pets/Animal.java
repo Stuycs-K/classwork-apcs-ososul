@@ -1,4 +1,4 @@
-public class Animal {
+public class Animal{
     private String noise;
     private int age;
     private String name;
