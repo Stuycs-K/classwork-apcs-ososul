@@ -1,3 +1,7 @@
+// Before overriding, the getName() method for both Animal and Bird returned the name without the mighty.
+// After overriding, the Bird class now adds "The Mighty" in addition to the name, but the Animal class still doesn't.
+// So, methods can be overridden in subclasses to change what they do.
+
 public class Driver {
 
     public static void main (String[] args){
