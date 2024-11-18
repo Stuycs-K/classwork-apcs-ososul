@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class TriangleTester {
-    
+
     public static boolean isValidTriangle(int a, int b, int c) {
         return (a + b > c) && (a + c > b) && (b + c > a);
     }
@@ -15,12 +15,10 @@ public class TriangleTester {
         try {
             Scanner sc = new Scanner(new File(filename));
 
-            while (sc.hasNextLine()) {
-                String line = sc.nextLine();
-                String[] sides = line.split(" ");
-                int side1 = Integer.parseInt(sides[0]);
-                int side2 = Integer.parseInt(sides[1]);
-                int side3 = Integer.parseInt(sides[2]);
+            while (sc.hasNextInt()) {
+                int side1 = sc.nextInt();
+                int side2 = sc.nextInt();
+                int side3 = sc.nextInt();
 
                 // Check if valid triangle
                 if (isValidTriangle(side1, side2, side3)) {
@@ -41,19 +39,14 @@ public class TriangleTester {
 
         try {
             Scanner sc = new Scanner(new File(filename));
-            String[][] rows = new String[3][]; // Array to store 
+            String[][] rows = new String[3][]; // Array to store
 
             while (sc.hasNextLine()) {
-                for (int i = 0; i < 3; i++) {
-                    if (sc.hasNextLine()) {
-                        rows[i] = sc.nextLine().split(" "); 
-                    }
-                }
 
                 for (int col = 0; col < 3; col++) {
-                    int side1 = Integer.parseInt(rows[0][col]);
-                    int side2 = Integer.parseInt(rows[1][col]);
-                    int side3 = Integer.parseInt(rows[2][col]);
+                    int side1 = sc.nextInt();
+                    int side2 = sc.nextInt();
+                    int side3 = sc.nextInt();
                     if (isValidTriangle(side1, side2, side3)) {
                         count++;
                     }
@@ -70,15 +63,15 @@ public class TriangleTester {
     // Main
     public static void main(String[] args) {
         String file = "inputTri.txt";
-    
+
         // Part A
         int trianglesByRow = countTrianglesA(file);
-        System.out.println(trianglesByRow); 
-    
+        System.out.println(trianglesByRow);
+
         // Part B
         int trianglesByColumn = countTrianglesB(file);
-        System.out.println(trianglesByColumn); 
+        System.out.println(trianglesByColumn);
     }
-    
+
 
 }
