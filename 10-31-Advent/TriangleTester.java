@@ -42,11 +42,16 @@ public class TriangleTester {
             String[][] rows = new String[3][]; // Array to store
 
             while (sc.hasNextLine()) {
+                for (int i = 0; i < 3; i++) {
+                    if (sc.hasNextInt()) {
+                        rows[i] = sc.nextInt();
+                    }
+                }
 
                 for (int col = 0; col < 3; col++) {
-                    int side1 = sc.nextInt();
-                    int side2 = sc.nextInt();
-                    int side3 = sc.nextInt();
+                    int side1 = Integer.parseInt(rows[0][col]);
+                    int side2 = Integer.parseInt(rows[1][col]);
+                    int side3 = Integer.parseInt(rows[2][col]);
                     if (isValidTriangle(side1, side2, side3)) {
                         count++;
                     }
