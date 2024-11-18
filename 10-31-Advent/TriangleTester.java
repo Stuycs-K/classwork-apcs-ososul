@@ -37,21 +37,20 @@ public class TriangleTester {
     public static int countTrianglesB(String filename) {
         int count = 0;
 
-        try {
-            Scanner sc = new Scanner(new File(filename));
-            String[][] rows = new String[3][]; // Array to store
-
+        try (Scanner sc = new Scanner(new File(filename))) {
+            // Read groups of three lines at a time
             while (sc.hasNextLine()) {
-                for (int i = 0; i < 3; i++) {
-                    if (sc.hasNextInt()) {
-                        rows[i] = sc.nextInt();
-                    }
-                }
-
+                String[] row1 = sc.nextLine().trim().split("\\s+");
+                String[] row2 = sc.nextLine().trim().split("\\s+");
+                String[] row3 = sc.nextLine().trim().split("\\s+");
+    
+                // Check triangles formed by columns
                 for (int col = 0; col < 3; col++) {
-                    int side1 = Integer.parseInt(rows[0][col]);
-                    int side2 = Integer.parseInt(rows[1][col]);
-                    int side3 = Integer.parseInt(rows[2][col]);
+                    int side1 = Integer.parseInt(row1[col]);
+                    int side2 = Integer.parseInt(row2[col]);
+                    int side3 = Integer.parseInt(row3[col]);
+    
+                    // Check if the sides form a valid triangle
                     if (isValidTriangle(side1, side2, side3)) {
                         count++;
                     }
