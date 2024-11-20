@@ -20,9 +20,7 @@ public class Day1 {
     return output;
 }
 
-
-
-public static int calculateDistance(String[] data) {
+public static int distance(String[] data) {
   int[][] directions = new int[4][2];
   directions[0][0] = 0; directions[0][1] = 1; // North
   directions[1][0] = 1; directions[1][1] = 0; // East
@@ -31,7 +29,7 @@ public static int calculateDistance(String[] data) {
 
   int x = 0;
   int y = 0;
-  int currentDirection = 0;
+  int current = 0;
 
   for (int i = 0; i < data.length; i++) {
       String step = data[i];
@@ -39,13 +37,13 @@ public static int calculateDistance(String[] data) {
       int distance = Integer.parseInt(step.substring(1));
 
       if (turn == 'L') {
-          currentDirection = (currentDirection + 3) % 4;
+          current = (current + 3) % 4;
       } else if (turn == 'R') {
-          currentDirection = (currentDirection + 1) % 4;
+          current = (current + 1) % 4;
       }
 
-      x = x + directions[currentDirection][0] * distance;
-      y = y + directions[currentDirection][1] * distance;
+      x = x + directions[current][0] * distance;
+      y = y + directions[current][1] * distance;
   }
 
   return Math.abs(x) + Math.abs(y);
@@ -55,7 +53,7 @@ public static int calculateDistance(String[] data) {
   public static void main (String[] args) {
     String file = "input.txt";
     String [] dataArray = toArray(file);
-    int x = calculateDistance(dataArray);
+    int x = distance(dataArray);
     System.out.println(x);
 
   }
