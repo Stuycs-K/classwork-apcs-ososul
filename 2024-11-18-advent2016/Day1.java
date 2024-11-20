@@ -4,23 +4,28 @@ import java.util.Scanner;
 
 public class Day1 {
 
-  public static String [] toArray (String filename){
+  public static String[] toArray(String filename) {
+    String[] output = new String[0];
     try {
-        Scanner sc = new Scanner(new File(filename));
-        String [] output = sc.split(", ");
-        return output;
-
+        File file = new File(filename);
+        Scanner scan = new Scanner(file);
+        if (scan.hasNextLine()) {
+            String line = scan.nextLine();
+            output = line.split(", ");
         }
-        sc.close();
+        scanner.close();
     } catch (FileNotFoundException e) {
         System.out.println("Error: File not found");
     }
-  }
+    return output;
+}
+
+}
 
   public static 
 
 
-  public static void main(String[] args) {
+  public static void main (String[] args) {
     String file = "input.txt";
     String [] dataArray = toArray(file);
 
