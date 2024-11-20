@@ -63,10 +63,10 @@ public class Day2 {
         return code;
     }
 
-
-
-
     public static void main(String[] args) {
-        
+        String name = "input.txt";
+        String [] out = getInput(name);
+        String result = findBathroomCode(out);
+        System.out.println(result);
     }
 }
