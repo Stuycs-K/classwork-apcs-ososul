@@ -5,21 +5,21 @@ import java.util.Scanner;
 public class Day2 {
     
      public static String[] getInput(String fileName) {
-        String[] lines = new String[0];
+        String[] output = new String[0];
         try {
             File file = new File(fileName);
-            Scanner scanner = new Scanner(file);
-            String allLines = "";
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                allLines = allLines + line + "\n";
+            Scanner scan = new Scanner(file);
+            String total = "";
+            while (scan.hasNextLine()) {
+                String line  = scan.nextLine();
+                total = total + line + "\n";
             }
-            lines = allLines.split("\n");
-            scanner.close();
+            output = total.split("\n");
+            scan.close();
         } catch (FileNotFoundException e) {
             System.out.println("Error: File not found.");
         }
-        return lines;
+        return output;
     }
 
 
