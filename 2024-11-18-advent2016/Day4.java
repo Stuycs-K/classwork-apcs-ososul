@@ -22,9 +22,16 @@ public class Day4 {
         return output;
     }
     
+    public static int getSum(String[] rooms) {
+
+        return 0;
+    }
 
 
     public static void main(String[] args) {
-        
+        String fileName = "input.txt";
+        String[] outAry = getInput(fileName);
+        int sum = getSum(outAry);
+        System.out.println(sum);
     }
 }
