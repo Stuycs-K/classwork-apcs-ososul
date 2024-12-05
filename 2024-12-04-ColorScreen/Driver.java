@@ -11,10 +11,10 @@ public class Driver {
 
 
         drawBorder(width, height); // Border
-        int[] randomNumbers = generateRandomIntegers(); // Random 
-        displayRandomIntegers(randomNumbers, width); // Display 
+        int[] randomNumbers = generateRand(); // Random 
+        displayRand(randomNumbers, width); // Display 
         drawSeparator(3, width); //  separator
-        drawCenterMessage(width, height); // Center 
+        drawCenter(width, height); // Center 
 
         Text.go(31, 1);
         System.out.println(Text.RESET);
@@ -41,7 +41,7 @@ public class Driver {
         }
     }
 
-    private static int[] generateRandomIntegers() {
+    private static int[] generateRand() {
         Random rand = new Random();
         int[] randomNumbers = new int[3];
         randomNumbers[0] = rand.nextInt(100);
@@ -50,7 +50,7 @@ public class Driver {
         return randomNumbers;
     }
 
-    private static void displayRandomIntegers(int[] numbers, int width) {
+    private static void displayRand(int[] numbers, int width) {
         int spacing = width / 4;
         for (int i = 0; i < 3; i++) {
             int col = (i + 1) * spacing;
@@ -74,7 +74,7 @@ public class Driver {
         }
     }
 
-    private static void drawCenterMessage(int width, int height) {
+    private static void drawCenter(int width, int height) {
         int centerX = width / 2;
         int centerY = height / 2;
         Text.go(centerY, centerX - 10); // Adjusted for length
