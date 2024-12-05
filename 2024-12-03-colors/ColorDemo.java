@@ -22,11 +22,11 @@ public class ColorDemo {
             System.out.println("\u001b[0m");
         }
 
-        Random rand = new Random();
+        Random randColor = new Random();
 
         for (int row = 0; row < 20; row++) {
             for (int col = 0; col < 40; col++) {
-                int color = 41 + rand.nextInt(6); 
+                int color = 41 + randColor.nextInt(6); 
                 System.out.print("\u001b[" + color + "m  ");
             }
             System.out.println("\u001b[0m"); 
