@@ -3,7 +3,7 @@ public class Wizard extends Adventurer {
     private int maxEnergy;
 
     public Wizard(String name) {
-        super(name, 20); // 20 HP
+        super(name, 20); // 20 HP 
         this.energy = 5; 
         this.maxEnergy = 10; 
     }
