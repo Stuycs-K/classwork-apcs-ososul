@@ -15,14 +15,14 @@ public class Game {
                     enemy.getSpecial() + "/" + enemy.getSpecialMax() + " " + enemy.getSpecialName());
 
             // Prompt user
-            System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
+            System.out.println("Type: attack / special / support / quit");
             String input = userInput.nextLine();
 
-            if (input.equals("a")) {
+            if (input.equals("attack")) {
                 System.out.println(player.attack(enemy));
-            } else if (input.equals("sp")) {
+            } else if (input.equals("special")) {
                 System.out.println(player.specialAttack(enemy));
-            } else if (input.equals("su")) {
+            } else if (input.equals("support")) {
                 System.out.println(player.support());
             } else if (input.equals("quit")) {
                 break;
