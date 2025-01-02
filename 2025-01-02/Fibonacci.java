@@ -17,6 +17,8 @@ public class Fibonacci {
 
   // overflows at 47, doesn't at 46 //
 
+  // 46 finishes under 10 seconds //
+
 
 
 
